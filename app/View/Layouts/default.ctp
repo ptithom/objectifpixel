@@ -1,0 +1,128 @@
+<?php
+$cakeDescription = __d('Objectifpixel', "Objectifpixel: Site web spécialisé dans la photo événementielle. Par Thomas sire amateur d'instant volé et photographe du Loire et Cher et Pays de la Loire.");
+
+?><!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]>
+<html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if (IE 9)]>
+<html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="fr-FR"> <!--<![endif]-->
+<head>
+
+    <?php echo $this->Html->charset(); ?>
+
+    <title>
+        Objectif-Pixel<?= ($this->request->here != '/')?" : ".$this->params['controller']:""; ?>
+    </title>
+
+    <link href="/img/icon.ico" type="image/x-icon" rel="icon">
+
+    <?php  echo $this->fetch('meta'); ?>
+
+    <meta name="description" content="<?php echo $cakeDescription ?>"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="MobileOptimized" content="320"/>
+
+    <meta property="og:title" content="Objectif Pixel" />
+    <meta property="og:description" content="<?php echo str_replace('du Loire et Cher et Pays de la Loire',"",$cakeDescription) ?>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://objectifpixel.com/" />
+    <meta property="og:image" content="http://objectifpixel.com/img/logo3.png" />
+
+    <!-- Css -->
+    <?php echo $this->Html->css('bootstrap.min'); ?>
+    <?php echo $this->Html->css('main'); ?>
+    <?php echo $this->Html->css('supersized'); ?>
+    <?php echo $this->Html->css('supersized.shutter'); ?>
+    <?php echo $this->Html->css('fancybox/jquery.fancybox'); ?>
+    <?php echo $this->Html->css('fonts'); ?>
+    <?php echo $this->Html->css('shortcodes'); ?>
+    <?php echo $this->Html->css('bootstrap-responsive.min'); ?>
+    <?php echo $this->Html->css('main-responsive'); ?>
+    <?php echo $this->Html->css('responsive'); ?>
+    <?php echo $this->Html->css('supersized'); ?>
+    <?php echo $this->Html->css('supersized.shutter'); ?>
+
+
+
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
+
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="#">
+    <link rel="apple-touch-icon" href="#">
+    <link rel="apple-touch-icon" sizes="114x114" href="#">
+    <link rel="apple-touch-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" sizes="144x144" href="#">
+
+    <!-- Js -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- jQuery Core -->
+
+</head>
+
+<body>
+<div id="fb-root"></div>
+<div id="fb-root"></div>
+<script>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=938453189516083&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- This section is for Splash Screen -->
+<div class="ole">
+    <section id="jSplash">
+        <div id="circle"></div>
+    </section>
+</div>
+
+<?php echo $this->Session->flash(); ?>
+
+<?php echo $this->fetch('content'); ?>
+
+<?php echo $this->element('footer'); ?>
+
+
+<!-- Js -->
+<?php echo $this->Html->script('modernizr.js'); ?>
+<?php echo $this->Html->script('bootstrap.min.js'); ?><!-- Bootstrap -->
+<?php echo $this->Html->script('supersized.3.2.7.min.js'); ?><!-- Slider -->
+<?php echo $this->Html->script('waypoints.js'); ?> <!-- WayPoints -->
+<?php echo $this->Html->script('waypoints-sticky.js'); ?> <!-- Waypoints for Header -->
+<?php echo $this->Html->script('jquery.isotope.js'); ?><!-- Isotope Filter -->
+<?php echo $this->Html->script('jquery.fancybox.pack.js'); ?><!-- Fancybox -->
+<?php echo $this->Html->script('jquery.fancybox-media.js'); ?> <!-- Fancybox for Media -->
+<?php echo $this->Html->script('jquery.tweet.js'); ?><!-- Tweet -->
+<?php echo $this->Html->script('plugins.js'); ?>
+<!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
+<?php echo $this->Html->script('main.js'); ?><!-- Default JS -->
+<!-- End Js -->
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-38625631-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+<?php //echo $this->element('sql_dump'); ?>
+
+</body>
+</html>
