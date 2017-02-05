@@ -25,4 +25,4 @@
 /vendors/*
 
 .idea
-app/webroot/files/*
+/app/webroot/files/*
