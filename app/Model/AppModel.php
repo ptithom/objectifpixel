@@ -34,7 +34,7 @@ class AppModel extends Model {
 	/**
 	 *  Table prefix
 	 */
-	    public $tablePrefix = 'opix_';
+	    public $tablePrefix = '';
 	    public $actsAs = array('Containable');
 	    public $recursive = -1;
 
