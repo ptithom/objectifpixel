@@ -42,7 +42,7 @@
 		</div>
         <!-- End  Event Shoot -->
 
-		<a href="<?= Configure::read('host') ?>/archives/categorie/event" class="btn-archive" > Archives </a>
+		<a href="<?= Configure::read('host') ?>/archives/categorie/event" class="btn-more" > Voir plus </a>
 
     </div>
 </div>

@@ -54,6 +54,26 @@ Version: 1.0
     color: #26292e;
 }
 
+.btn-more {
+    text-align: center;
+    display: block;
+
+    width: 20%;
+    height: 40px;
+    margin: auto;
+    line-height: 40px;
+    vertical-align: middle;
+    background-color: #DE5E60;
+    color: #26292e;
+}
+
+.btn-more:hover {
+    background-color: transparent;
+    border: 1px solid #DE5E60;
+    color: #DE5E60;
+}
+
+
 .breadcrumbs {
 
     position: relative;
