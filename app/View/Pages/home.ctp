@@ -3,6 +3,6 @@
 <?php //echo $this->element('block_news'); ?>
 <?php echo $this->element('block_new_event'); ?>
 <?php echo $this->element('block_project'); ?>
-<?php echo $this->element('block_archive'); ?>
 <?php echo $this->element('about'); ?>
+<?php echo $this->element('block_archive'); ?>
 <?php echo $this->element('call_contact'); ?>
