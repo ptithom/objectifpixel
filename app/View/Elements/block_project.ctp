@@ -19,7 +19,7 @@
         	<div class="image-wrap">
                 <a class="hover-wrap" href="<?= Configure::read('host') ?>/archives/categorie/Evenement" >
                     <span class="overlay-img "></span>
-                    <span class="overlay-text-thumb"><h3>Evenement</h3></span>
+                    <span class="overlay-text-thumb"><h3>L'argentique</h3></span>
                 </a>
                 <div class="event_back" style="background-image:url('/files/project/event.jpg')"></div>
             </div>
@@ -41,7 +41,7 @@
                 <div class="hover-wrap">
                     <a class="hover-wrap" href="<?= Configure::read('host') ?>/OnePixOneWeek/" >
                         <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb"><h3>Mon Carnet Photographique</h3></span>
+                        <span class="overlay-text-thumb"><h3>Carnet <br> Photographique</h3></span>
                     </a>
                 </div>
                 <div class=" onepixoneweek_back" style="background-image:url('/files/project/onepixoneweek.jpg')"></div>

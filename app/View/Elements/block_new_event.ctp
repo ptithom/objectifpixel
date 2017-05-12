@@ -44,5 +44,8 @@
 
 		<a href="<?= Configure::read('host') ?>/archives/categorie/event" class="btn-more" > Voir plus </a>
 
+<p class="profile-description">Depuis longtemps passionné de <a href="#">concerts et autres évenements</a> de tout type, je me suis donné l'objectif d'arriver à transmettre l'intensité, la chaleur, la beauté, d'un événement par la captation d'instants (une action, un regard, un geste,...).</p>
+
+
     </div>
 </div>

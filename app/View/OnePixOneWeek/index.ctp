@@ -6,7 +6,7 @@
         <div class="row">
             <div class="span12">
                 <div class="title-page title_new_events">
-                    <h1 class="title ">Mon Carnet Photographique</h1>
+                    <h1 class="title ">Carnet Photographique</h1>
                 </div>
             </div>
         </div>
