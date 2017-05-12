@@ -41,5 +41,8 @@
 
 		</div>
         <!-- End  Event Shoot -->
+
+		<a href="<?= Configure::read('host') ?>/archives/categorie/event" class="btn-archive" > Archives </a>
+
     </div>
 </div>

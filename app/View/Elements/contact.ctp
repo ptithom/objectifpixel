@@ -42,11 +42,11 @@
         	<div class="contact-details">
         		<h3>Details</h3>
                 <ul>
-                    <li><a href="#">contact(at)objectifpixel.com</a></li>
+                    <li><a href="#">t.sire41+objectifpixel(at)gmail.com</a></li>
                     <li>
                         Thomas sire
                         <br>
-                        5 rue garnier, 49100 Angers
+                        49100 Angers
                         <br>
                         FRANCE
                     </li>
