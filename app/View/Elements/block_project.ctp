@@ -41,7 +41,7 @@
                 <div class="hover-wrap">
                     <a class="hover-wrap" href="<?= Configure::read('host') ?>/OnePixOneWeek/" >
                         <span class="overlay-img"></span>
-                        <span class="overlay-text-thumb"><h3>One Pix One Week</h3></span>
+                        <span class="overlay-text-thumb"><h3>Mon Carnet Photographique</h3></span>
                     </a>
                 </div>
                 <div class=" onepixoneweek_back" style="background-image:url('/files/project/onepixoneweek.jpg')"></div>
