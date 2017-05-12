@@ -23,7 +23,10 @@
                 </a>
                 <div class="event_back" style="background-image:url('/files/project/event.jpg')"></div>
             </div>
-            <p class="profile-description">Depuis longtemps passionné de <a href="#">concerts et autres évenements</a> de tout type, je me suis donné l'objectif d'arriver à transmettre l'intensité, la chaleur, la beauté, d'un événement par la captation d'instants (une action, un regard, un geste,...).</p>
+            <p class="profile-description">
+                Depuis longtemps passionné de <a href="#">la photographie</a>
+                un jour je me suis je me suis intéréssé a l'argentique et je suis tombé sous le charge.
+            </p>
 
             	
             <div class="social">
