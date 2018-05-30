@@ -21,7 +21,7 @@
                                     <?= $this->Html->image('info2.png', array('alt' => 'info')); ?>
                                 </div>
                                 <div class="content_actu_site" >
-                                    <a href="#" target=_blank>
+                                    <a href="<?= $Actue_footer['Actualite']['link'] ?>" target=_blank>
                                         <?= $Actue_footer['Actualite']['title'] ?>
                                     </a>
                                     <?php if(!empty($Actue['Actualite']['photographe_id'])): ?>
