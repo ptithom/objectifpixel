@@ -6,7 +6,9 @@
             <a id="goUp" href="<?= Configure::read('host') ?>/#home-slider">Objectif-pixel</a>
         </div>
 
-        <?php echo $this->Session->flash(); ?>
+        <nav id="menu flashinfo">
+            <?php echo $this->Session->flash(); ?>
+        </nav>
 
     </div>
 </header>
