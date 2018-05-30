@@ -17,7 +17,7 @@
         <!-- Start Profile -->
     	<div class="span4 block_project">
         	<div class="image-wrap">
-                <a class="hover-wrap" href="<?= Configure::read('host') ?>/archives/categorie/Evenement" >
+                <a class="hover-wrap" href="<?= Configure::read('host') ?>/archives/galerie/argentique" >
                     <span class="overlay-img "></span>
                     <span class="overlay-text-thumb"><h3>L'argentique</h3></span>
                 </a>

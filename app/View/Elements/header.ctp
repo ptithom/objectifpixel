@@ -11,7 +11,7 @@
             	<li class="current"><a href="<?= Configure::read('host') ?>/">Home</a></li>
                 <li><a href="<?= Configure::read('host') ?>/archives/categorie/Evenement">Evenement</a></li>
                 <li><a href="<?= Configure::read('host') ?>/OnePixOneWeek">Carnet</a></li>
-                <li><a href="<?= Configure::read('host') ?>/Book">Argentique</a></li>
+                <li><a href="<?= Configure::read('host') ?>/archives/galerie/argentique">Argentique</a></li>
                 <li><a href="https://www.photomaniax.ovh/" target="_blank">Photomaniax</a></li>
                 <li><a href="<?= Configure::read('host') ?>/Pages/contact">Contact</a></li>
                 <li><a href="<?= Configure::read('host') ?>/archives/categorie">Archives</a></li>

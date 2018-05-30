@@ -60,13 +60,10 @@ $cakeDescription = __d('Objectifpixel', 'Admin');
 
 
 
-        <?php echo $this->Session->flash(); ?>
+
         <div class="wapper">
             <?php echo $this->fetch('content'); ?>
         </div>
-
-        <?php echo $this->element('footer'); ?>       
-
 
         <!-- Js -->
         <!-- End Js -->
