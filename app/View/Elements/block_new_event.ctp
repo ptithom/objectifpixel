@@ -7,10 +7,14 @@
         <div class="row">
             <div class="span12">
                 <div class="title-page title_new_events">
-                    <h2 class="title ">Les News</h2>
+                    <h2 class="title ">Couverture evenementiel</h2>
                 </div>
             </div>
-        </div>
+
+			<p class="title-description-news span8">Depuis longtemps passionné de <a href="#">concerts et autres évenements</a> de tout type, je me suis donné l'objectif d'<a href="#">arriver à transmettre l'intensité</a>, la chaleur, la beauté, par la captation cette ce moment.</p>
+
+
+		</div>
         <!-- End Title Page -->
 
         <!-- Event Shoot -->
@@ -44,7 +48,6 @@
 
 		<a href="<?= Configure::read('host') ?>/archives/categorie/event" class="btn-more" > Voir plus </a>
 
-<p class="profile-description">Depuis longtemps passionné de <a href="#">concerts et autres évenements</a> de tout type, je me suis donné l'objectif d'arriver à transmettre l'intensité, la chaleur, la beauté, d'un événement par la captation d'instants (une action, un regard, un geste,...).</p>
 
 
     </div>

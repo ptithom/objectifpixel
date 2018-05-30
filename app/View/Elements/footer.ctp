@@ -21,7 +21,7 @@
                                     <?= $this->Html->image('info2.png', array('alt' => 'info')); ?>
                                 </div>
                                 <div class="content_actu_site" >
-                                    <a href="<?= $last_story_post->link ?>" target=_blank>
+                                    <a href="#" target=_blank>
                                         <?= $Actue_footer['Actualite']['title'] ?>
                                     </a>
                                     <?php if(!empty($Actue['Actualite']['photographe_id'])): ?>
@@ -32,7 +32,7 @@
                                     <span class="txt_actu_site" ><?= $Actue_footer['Actualite']['content'] ?></span></br>
                                 </div>
                             </section>
-
+                            <?php if(!empty($last_story_post)): ?>
                             <section class="actu_fb">
                                 <div class="wrappe_actu_fb">
                                     <div class="img_actu_fb" >
@@ -59,6 +59,7 @@
                                 </div>
 
                             </section>
+                            <?php endif; ?>
                             <section >
                                 <!--<div class="follow">
                                     <a href="https://twitter.com/Bluxart" title="Follow Me on Twitter" target="_blank"><i class="font-icon-social-twitter"></i></a>-->
