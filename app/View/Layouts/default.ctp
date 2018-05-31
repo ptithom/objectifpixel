@@ -70,7 +70,7 @@ $cakeDescription = __d('Objectifpixel', "Objectifpixel: Site web spécialisé da
 
 
     <!-- Google Font -->
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
 
     <!-- Fav Icon -->
     <link rel="shortcut icon" href="#">
@@ -80,7 +80,7 @@ $cakeDescription = __d('Objectifpixel', "Objectifpixel: Site web spécialisé da
     <link rel="apple-touch-icon" sizes="144x144" href="#">
 
     <!-- Js -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!-- jQuery Core -->
 
 </head>
