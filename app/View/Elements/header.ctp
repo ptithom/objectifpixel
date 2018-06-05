@@ -24,11 +24,11 @@
 
     <script>
 
-        $(function() {
-            $(document).on('click',' #menu-nav li,#menu-nav-mobile li', function(){
-                location.replace($(this).children('a').attr('href'));
-            });
-        });
+//        $(function() {
+//            $(document).on('click',' #menu-nav li,#menu-nav-mobile li', function(){
+//                location.replace($(this).children('a').attr('href'));
+//            });
+//        });
 
     </script>
 

@@ -21,7 +21,7 @@
                     <span class="overlay-img "></span>
                     <span class="overlay-text-thumb"><h3>L'argentique</h3></span>
                 </a>
-                <div class="event_back" style="background-image:url('/files/photo/argentique/develop_1_17_s.jpg')"></div>
+                <div class="event_back" style="background-image:url('/files/photo/argentique/develop_1_17_s_300x300.jpg')"></div>
             </div>
             <p class="profile-description">
                 Depuis longtemps passionné de <a href="#">la photographie</a>
