@@ -95,5 +95,5 @@
                 </div>
             </div>
 
-        	<p class="credits">&copy;2014 OBJECTIFPIXEL. Developpé par <a href="http://www.thomassire.com/" title="Athoamssire | Web Developpeur" target="_blank">THOMAS SIRE</a></p>
+        	<p class="credits">&copy;2014 OBJECTIFPIXEL. Developpé par <a href="http://www.thomassire.com/" title="Thomas Sire | Web Developpeur" target="_blank"><strong>THOMAS SIRE</strong></a></p>
         </footer>
