@@ -169,48 +169,7 @@ return returnValue;
 },
 
 handleClick: function(e) {
-var self = this;
-var $link = $(e.currentTarget);
-var $parent = $link.parent();
-var newLoc = '#' + self.getHash($link);
 
-if(!$parent.hasClass(self.config.currentClass)) {
-//Start callback
-if(self.config.begin) {
-self.config.begin();
-}
-
-//Change the highlighted nav item
-self.adjustNav(self, $parent);
-
-//Removing the auto-adjust on scroll
-self.unbindInterval();
-
-//Scroll to the correct position
-$.scrollTo(newLoc, self.config.scrollSpeed, {
-axis: 'y',
-easing: self.config.easing,
-offset: {
-top: -self.config.scrollOffset
-},
-onAfter: function() {
-//Do we need to change the hash?
-if(self.config.changeHash) {
-window.location.hash = newLoc;
-}
-
-//Add the auto-adjust on scroll back in
-self.bindInterval();
-
-//End callback
-if(self.config.end) {
-self.config.end();
-}
-}
-});
-}
-
-e.preventDefault();
 },
 
 scrollChange: function() {
