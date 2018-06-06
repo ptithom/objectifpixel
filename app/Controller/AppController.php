@@ -108,10 +108,17 @@ class AppController extends Controller {
 	public function get_last_pictures(){
 
 		$this->loadModel('Photo');
+		$this->loadModel('CategoriesPhoto');
 		$data['new_photos'] = $this->Photo->find('all', array(
 			'order' => array('Photo.updated DESC'),
 			'limit' => 9
 		));
+
+		foreach($data['new_photos'] as &$photo){
+			$photo['CategoriesPhoto'] = current($this->CategoriesPhoto->find('first', array(
+				'conditions' => array('CategoriesPhoto.id' => $photo['Photo']['categories_photo_id'])
+			)));
+		}
 
 		return $data['new_photos'];
 		

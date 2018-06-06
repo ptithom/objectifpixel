@@ -2,7 +2,7 @@
 
 	class BookPage extends AppModel {
 
-		    public $belongto = array('Photo');
+		    public $belongsto = array('Photo');
 
 	}
 

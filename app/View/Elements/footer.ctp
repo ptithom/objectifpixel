@@ -87,7 +87,15 @@
                             <div style="text-align:center;margin-bottom: 18px;font-size: 20px;font-style:italic">News</div>
                             <div>
                                 <?php foreach ($Pictures_footer as $key => $value): ?>
-                                <div class="blocs_new_footer"><?= $this->Image->resize('../'.$value['Photo']['link'],"90", "90",array('alt' => 'news','class' => 'img_blocs_new_footer'), 100); ?></div>
+                                <div class="blocs_new_footer">
+
+                                    <?php
+                                    echo $this->Html->link($this->Image->resize('../'.$value['Photo']['link'],"90", "90",array('alt' => 'news','class' => 'img_blocs_new_footer'), 100),
+                                        array('controller' => 'archives', 'action' => 'categorie' , $value['CategoriesPhoto']['slug']),
+                                        array('escape' => false)
+                                    );
+                                    ?>
+                                </div>
                                 <?php endforeach; ?>
                             </div>
                         </div>
