@@ -15,18 +15,27 @@
                 <?= $categorie['CategoriesPhoto']['slug'] ?>
                 <div class="wrapper_action">
                     <ul>
-                        <li>
-                            <a href="<?= Configure::read('host') ?>/archives/categorie/<?= $categorie['CategoriesPhoto']['slug'] ?> "
-                               target="_blank">Voir </a>
-                        </li>
-                        <li>
-                            <a href="<?= Configure::read('host') ?>/l/Admin/update_categorie/<?= $categorie['CategoriesPhoto']['id'] ?> ">Modifier </a>
-                        </li>
                         <?php if (empty($categorie["CategoriesPhoto"]['child'])) : ?>
                             <li>
                                 <a href="<?= Configure::read('host') ?>/l/Admin/delete_categorie/<?= $categorie['CategoriesPhoto']['id'] ?> ">Supprimer</a>
                             </li>
+
+                            <li>
+                                <a href="<?= Configure::read('host') ?>/l/Admin/update_photo/<?= $categorie['CategoriesPhoto']['id'] ?> "> Photos </a>
+                            </li>
+
                         <?php endif; ?>
+                        <li>
+                            <a href="<?= Configure::read('host') ?>/archives/categorie/<?= $categorie['CategoriesPhoto']['slug'] ?> "
+                               target="_blank">F.O.</a>
+                        </li>
+                        <li>
+                            <a href="<?= Configure::read('host') ?>/l/Admin/update_categorie/<?= $categorie['CategoriesPhoto']['id'] ?> ">Modifier </a>
+                        </li>
+
+
+
+
                     </ul>
                 </div>
             </li>
@@ -39,15 +48,20 @@
                         <div class="wrapper_action">
                             <ul>
                                 <li>
+                                    <a href="<?= Configure::read('host') ?>/l/Admin/delete_categorie/<?= $child_cat['CategoriesPhoto']['id'] ?> ">Supprimer</a>
+                                </li>
+                                <li>
+                                    <a href="<?= Configure::read('host') ?>/l/Admin/update_photo/<?= $categorie['CategoriesPhoto']['id'] ?> "> Photos </a>
+                                </li>
+                                <li>
                                     <a href="<?= Configure::read('host') ?>/archives/categorie/<?= $child_cat['CategoriesPhoto']['slug'] ?> "
-                                       target="_blank">Voir </a>
+                                       target="_blank">F.O.</a>
                                 </li>
                                 <li>
                                     <a href="<?= Configure::read('host') ?>/l/Admin/update_categorie/<?= $child_cat['CategoriesPhoto']['id'] ?> ">Modifier </a>
                                 </li>
-                                <li>
-                                    <a href="<?= Configure::read('host') ?>/l/Admin/delete_categorie/<?= $child_cat['CategoriesPhoto']['id'] ?> ">Supprimer</a>
-                                </li>
+
+
                             </ul>
                         </div>
                     </li>

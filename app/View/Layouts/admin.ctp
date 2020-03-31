@@ -56,7 +56,7 @@ $cakeDescription = __d('Objectifpixel', 'Admin');
 
     </head>
 
-    <body class="admin">
+    <body class="admin" id="<?= $this->request->params['action']; ?>">
 
 
         <div class="wapper">
