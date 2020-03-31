@@ -1,0 +1,124 @@
+body {
+  .vertical-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .wrapper_connect {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+
+    .wrapper_input {
+      margin-bottom: 20px;
+    }
+
+    .wrapper_logo {
+      position: absolute;
+
+      .logo {
+        width: 400px;
+      }
+
+      margin-left: -500px;
+      margin-right: 100px;
+    }
+  }
+
+  aside#menu-admin {
+    #menu-nav-admin {
+      .sub-menu {
+        margin-bottom: 20px;
+
+        li {
+          margin-left: 0;
+
+          a {
+            text-transform: inherit;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .wrapper_list_items {
+    > ul {
+      padding: 0;
+      margin: 0;
+
+      > li {
+        padding: 9px 20px;
+        list-style: none;
+        text-transform: uppercase;
+
+        &:nth-child(odd) {
+          background-color: lighten(#212328, 0.2);
+        }
+
+        &.sub{
+          padding-left: 40px;
+        }
+
+        .wrapper_action {
+          float: right;
+
+          ul {
+            li {
+              list-style: none;
+              display: inline-block;
+              margin-left: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .wrapper_title {
+    .wrapper_link {
+      float: right;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+  }
+
+  .wrapper_content {
+    margin-left: calc(18% + 50px);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+
+    form {
+      .input {
+        margin-bottom: 15px;
+
+        input, textarea, select {
+          width: 400px;
+          padding: 5px 15px;
+          font-size: 16px;
+          border-radius: 4px;
+
+        }
+      }
+
+      .submit {
+        input {
+          padding: 10px 25px;
+          text-transform: uppercase;
+          border-radius: 4px;
+          background-color: #212328;
+          color: white;
+          letter-spacing: 1.5;
+          border: 0;
+        }
+
+      }
+    }
+  }
+
+}

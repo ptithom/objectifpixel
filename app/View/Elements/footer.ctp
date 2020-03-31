@@ -80,7 +80,7 @@
                                 <li><a href="#">Concert</a></li>
                                 <li><a href="#">Pictures Art</a></li>
                                 <li><a href="#">Maine et Loire</a></li>
-                                <li><a href="#">Loire et cher</a></li>
+                                <li><a href="#">Loir et cher</a></li>
                             </ul>
                         </div>
                         <div class="span3">

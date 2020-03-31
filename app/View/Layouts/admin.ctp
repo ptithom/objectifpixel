@@ -39,7 +39,7 @@ $cakeDescription = __d('Objectifpixel', 'Admin');
         <?php echo $this->Html->css('bootstrap-responsive.min'); ?>
         <?php echo $this->Html->css('responsive'); ?>
         <?php echo $this->Html->css('supersized'); ?>
-        <?php echo $this->Html->css('supersized.shutter'); ?>
+        <?php echo $this->Html->css('admin'); ?>
 
         <!-- Google Font -->
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
@@ -59,16 +59,17 @@ $cakeDescription = __d('Objectifpixel', 'Admin');
     <body class="admin">
 
 
-
-
         <div class="wapper">
-            <?php echo $this->fetch('content'); ?>
+
+            <?php echo $this->element('header_admin'); ?>
+            <?php echo $this->element('sidebar_admin'); ?>
+            <div class="wrapper_content">
+
+                <?php echo $this->Session->flash(); ?>
+                <?php echo $this->fetch('content'); ?>
+
+            </div>
         </div>
-
-        <!-- Js -->
-        <!-- End Js -->
-
-        <?php //echo $this->element('sql_dump'); ?>
 
     </body>
 </html>

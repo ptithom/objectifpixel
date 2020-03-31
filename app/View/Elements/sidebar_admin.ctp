@@ -1,11 +1,29 @@
+
+
+
 <aside id="menu-admin">
 	<ul id="menu-nav-admin">
-    	<li><a href="<?= Configure::read('host') ?>/l/Admin/update_photographe" target="_blank">Mon Compte</a></li>
-        <li><a href="<?= Configure::read('host') ?>/l/Admin/add_photo">ADD Photo</a></li>
-        <li><a href="<?= Configure::read('host') ?>/l/Admin/">ADD Book</a></li>
-        <li><a href="<?= Configure::read('host') ?>/l/Admin/add_categorie">ADD Categorie</a></li>
-        <li><a href="<?= Configure::read('host') ?>/l/Admin/add_actualite">ADD Actu</a></li>
-        <li><a href="<?= Configure::read('host') ?>/l/Admin/add_photographe">ADD photographe</a></li>
+    	<li><a href="<?= Configure::read('host') ?>/l/Admin/update_photographe/<?= $this->Session->read('Auth.User.Photographe.id'); ?>" target="_blank">Mon Compte</a></li>
+        <li>
+            <a href="<?= Configure::read('host') ?>/l/Admin/categories">Mes Shooting</a>
+            <ul class="sub-menu">
+                <li><a href="<?= Configure::read('host') ?>/l/Admin/update_categorie"> - Ajouter une catégorie</a></li>
+                <li><a href="<?= Configure::read('host') ?>/l/Admin/update_photo"> - Ajouter des photos</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="<?= Configure::read('host') ?>/l/Admin/actualites">Mes Actualités</a>
+            <ul class="sub-menu">
+                <li><a href="<?= Configure::read('host') ?>/l/Admin/update_actualite"> - Ajouter</a></li>
+            </ul>
+        </li>
+<!--        <li>-->
+<!--            <a href="--><?//= Configure::read('host') ?><!--/l/Admin/photographes">Photographe</a>-->
+<!--            <ul class="sub-menu">-->
+<!--                <li><a href="--><?//= Configure::read('host') ?><!--/l/Admin/update_photographe"> - Ajouter</a></li>-->
+<!--            </ul>-->
+<!--        </li>-->
+<!--        <li><a href="--><?//= Configure::read('host') ?><!--/l/Admin/">ADD Book</a></li>-->
         <li><a href="<?= Configure::read('host') ?>/Admin/logout">Lougout</a></li>
     </ul>
 </aside>

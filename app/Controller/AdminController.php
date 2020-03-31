@@ -8,6 +8,8 @@
 		public $uses = array('CategoriesPhoto');
 
 		public function connect() {
+
+            $this->layout = 'admin';
 			$data = "";
 			if($this->Session->check('Auth.User')){
         		$this->redirect(array('controller' => 'admin', 'action' => 'dashbord', 'lock' => true));
@@ -33,10 +35,32 @@
 		}
 
 		public function index(){
-
 		}
 
-		public function lock_add_photo(){
+		public function lock_categories(){
+            $this->layout = 'admin';
+            $this->loadModel('CategoriesPhoto');
+            $this->loadModel('CategoriesInformation');
+
+            $data['categories'] = $this->CategoriesPhoto->Get_AllCatByArbo();
+
+            $this->set($data);
+
+        }
+
+        public function lock_actualites(){
+            $this->layout = 'admin';
+            $this->loadModel('Actualite');
+
+            $photographe_id = $this->Session->read('Auth.User.Photographe.id');
+
+            $data['actualites'] = $this->Actualite->find('all',array('conditions' => array('Actualite.photographe_id' => $photographe_id)));
+            $this->set($data);
+
+        }
+
+
+		public function lock_update_photo(){
 			$this->layout = 'admin';
 			$this->loadModel('CategoriesPhoto');
 			$this->loadModel('Photo');
@@ -88,7 +112,7 @@
 
 		}
 
-		public function lock_add_actualite(){
+		public function lock_update_actualite($id_actu = null){
 
 			$this->layout = 'admin';
 			$this->loadModel('Actualite');
@@ -109,18 +133,23 @@
 				}else
 					$this->Session->setFlash("Remplir les champs de titre et de descritions.");
 			}else{
-				$this->request->data = array(
-					'Actualite' => array(
-						'categories_photo_id' => 'NULL',
-						'date' => date('Y-m-d'),
-					)
-				);
+                if(!empty($id_actu)){
+                    $this->request->data = $this->Actualite->find('first',array('conditions' => array('Actualite.id' => $id_actu)));
+                    }else {
+
+                    $this->request->data = array(
+                        'Actualite' => array(
+                            'categories_photo_id' => 'NULL',
+                            'date' => date('Y-m-d'),
+                        )
+                    );
+                }
 			}
 			$this->set($data);
 
 		}
 
-		public function lock_add_categorie(){
+		public function lock_update_categorie($id_categorie = null){
 
 			$this->layout = 'admin';
 			$this->loadModel('CategoriesPhoto');
@@ -176,22 +205,27 @@
 				}
 			}else{
 
-				$this->request->data = array(
-					'CategoriesPhoto' => array(
-						'photographe_id' => '1',
-						'content' => null,
-						'link' => null,
-						'title' => null,
-						'categories_photo_id' => "NULL",
-						'event' => "1"
-					)
-				);
+                if(!empty($id_categorie)){
+                    $this->request->data = $this->CategoriesPhoto->find('first',array('conditions' => array('CategoriesPhoto.id' => $id_categorie)));
+                    $this->request->data['CategoriesInformation'] = current($this->CategoriesInformation->find('first',array('conditions' => array('CategoriesInformation.categories_photo_id' => $this->request->data['CategoriesPhoto']['id']),)));
+                }else{
+                    $this->request->data = array(
+                        'CategoriesPhoto' => array(
+                            'photographe_id' => '1',
+                            'content' => null,
+                            'link' => null,
+                            'title' => null,
+                            'categories_photo_id' => "NULL",
+                            'event' => "1"
+                        )
+                    );
+                }
 
 			}
 			$this->set($data);
 		}
 
-		public function lock_add_photographe(){
+		public function lock_update_photographe($id_photographe = null){
 			$this->layout = 'admin';
 			$data['Actue'] = $this->get_last_actue();
 
@@ -216,51 +250,58 @@
 				}else
 					$this->Session->setFlash("Remplir les champs de email, nom et mot de pass.");
 			}else{
-				$this->request->data = array(
-					'Photographe' => array(
-						'type_user' => 'post',
-					)
-				);
+                if(!empty($id_photographe)){
+                    $this->request->data = $this->Photographe->find('first',array('conditions' => array('Photographe.id' => $id_photographe)));
+                }else {
+
+                    $this->request->data = array(
+                        'Photographe' => array(
+                            'type_user' => 'post',
+                        )
+                    );
+                }
 			}
 			$this->set($data);
 		}
 
-		public function lock_update_photographe(){
-			$this->layout = 'admin';
-
-			$this->loadModel('Photographe');
-
-			//if session Auth
-			if($this->request->data){
-
-				$data_request = $this->request->data['Photographe'];
-				if(!empty($data_request['name']) && !empty($data_request['passwd']) && !empty($data_request['email'])){
-					$test = $this->Photographe->find('first', array(
-						'conditions' => array('Photographe.passwd' => md5($data_request['passwd']))
-					));
-					if(!empty($test)){
-						if(!empty($data_request['new_passwd'])){
-							$data_request['passwd'] = md5($data_request['new_passwd']);
-						}else{
-							$data_request['passwd'] = md5($data_request['passwd']);
-						}
-						$this->Photographe->save($data_request);
-						$this->Session->setFlash("User Updated.");
-						$this->Session->write('Auth.User',array('Photographe' => $data_request));
-
-					}else
-						$this->Session->setFlash("Erreur sur le mot de pass");
-				}else
-					$this->Session->setFlash("Remplir les champs de email, nom et mot de pass.");
-			}else{
-				$this->request->data = $this->Session->read('Auth.User');
-				unset($this->request->data['Photographe']['passwd']);
-			}
-		}
 
 		public function logout() {
 		    $this->redirect($this->Auth->logout());
 		}
+
+		public function lock_delete_categorie($id_categorie){
+
+		    if(!empty($id_categorie)){
+
+                $this->loadModel('CategoriesPhoto');
+                $this->loadModel('CategoriesInformation');
+
+                if($this->CategoriesPhoto->deleteAll(array('CategoriesPhoto.id' => $id_categorie), false)){
+                    $this->CategoriesInformation->deleteAll( array('CategoriesInformation.categories_photo_id' => $id_categorie), false);
+                    $this->Session->setFlash("ID : $id_categorie DELETE");
+                }
+
+
+            }
+
+            return $this->redirect("/l/Admin/categories");
+
+        }
+
+        public function lock_delete_actualite($id_actu){
+
+            if(!empty($id_actu)){
+
+                $this->loadModel('Actualite');
+
+                if($this->Actualite->deleteAll(array('Actualite.id' => $id_actu), false)){
+                     $this->Session->setFlash("ID : $id_actu DELETE");
+                }
+
+            }
+            return $this->redirect("/l/Admin/actualites");
+
+        }
 
 		public function isAuthorized($user) {
 		    if (isset($user['Photographe']['type_user']) && $user['Photographe']['type_user'] === 'admin') {

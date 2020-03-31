@@ -1,5 +1,5 @@
 <?php
-$cakeDescription = __d('Objectifpixel', "Objectifpixel: Site web spécialisé dans la photo événementielle. Par Thomas sire amateur d'instant volé et photographe du Loire et Cher et Pays de la Loire.");
+$cakeDescription = __d('Objectifpixel', "Objectifpixel: Site web spécialisé dans la photo événementielle. Par Thomas sire amateur d'instant volé et photographe du Loir et Cher et Pays de la Loire.");
 
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>
@@ -48,7 +48,7 @@ $cakeDescription = __d('Objectifpixel', "Objectifpixel: Site web spécialisé da
     <meta name="MobileOptimized" content="320"/>
 
     <meta property="og:title" content="Objectif Pixel" />
-    <meta property="og:description" content="<?php echo str_replace('du Loire et Cher et Pays de la Loire',"",$cakeDescription) ?>" />
+    <meta property="og:description" content="<?php echo str_replace('du Loir et Cher et Pays de la Loire',"",$cakeDescription) ?>" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://objectifpixel.com/" />
     <meta property="og:image" content="http://objectifpixel.com/img/logo3.png" />
