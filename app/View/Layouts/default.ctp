@@ -61,17 +61,17 @@ $cakeDescription = __d('Objectifpixel', "Objectifpixel: Photographe événementi
         <meta property="og:url"
               content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>"/>
         <meta property="og:site_name" content="Objectifpixel"/>
-        <meta property="og:image" content="<?= "/app/webroot" . $categorie['CategoriesInformation']['img_cat'] ?>"/>
+        <meta property="og:image" content="<?= "https://objectifpixel.com/app/webroot" . $categorie['CategoriesInformation']['img_cat'] ?>"/>
         <meta property="og:image:width" content="<?php echo $size_media[0]; ?>"/>
         <meta property="og:image:height" content="<?php echo $size_media[1]; ?>"/>
-        <link rel="image_src" href="<?php echo "/app/webroot" . $categorie['CategoriesInformation']['img_cat']; ?>"/>
+        <link rel="image_src" href="<?php echo "https://objectifpixel.com/app/webroot" . $categorie['CategoriesInformation']['img_cat']; ?>"/>
 
     <?php else: ?>
         <meta property="og:title" content="Objectif Pixel"/>
         <meta property="og:description" content="<?php echo $cakeDescription ?>"/>
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="http://objectifpixel.com/"/>
-        <meta property="og:image" content="http://objectifpixel.com/img/logo3.png"/>
+        <meta property="og:url" content="https://objectifpixel.com/"/>
+        <meta property="og:image" content="https://objectifpixel.com/img/logo3.png"/>
     <?php endif; ?>
 
     <!-- Css -->
