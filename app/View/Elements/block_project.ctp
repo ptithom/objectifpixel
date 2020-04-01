@@ -4,8 +4,8 @@
     <div class="row">
         <div class="span12">
             <div class="title-page">
-                <h2 class="title">Mes autre projets</h2>
-                <div class="title-description">Découvrez différentes façons de voir <a href="#">la photographie</a> .</div>
+                <h2 class="title">D'autres visions</h2>
+                <div class="title-description">Découvrez mes autres travaux autour de <strong>la photographie</strong>.</div>
             </div>
         </div>
     </div>
@@ -24,8 +24,8 @@
                 <div class="event_back" style="background-image:url('/files/photo/argentique/develop_1_17_s_300x300.jpg')"></div>
             </div>
             <p class="profile-description">
-                Depuis longtemps passionné de <a href="#">la photographie</a>
-                un jour je me suis je me suis intéréssé a l'argentique et je suis tombé sous le charge. On retrouve <a href="#">le charme</a> de l'aléatoire que l'on essai de métriser sans jamais etre parfaitement sur du rendu que cela va alors.
+                A l'aire du full numérique, <strong>je m'adone quelque fois a l'argentique</strong>. <br>Rien de mieux que de <strong>retourner a la base</strong> pour mieux en comprendre les rouages
+                <br>De plus cela donnent aux clichés une chaleur inégalable.
             </p>
 
         </div>
@@ -42,8 +42,9 @@
                 </div>
                 <div class=" onepixoneweek_back" style="background-image:url('/files/project/onepixoneweek.jpg')"></div>
             </div>
-            <p class="profile-description">Certain écrivent dans un journal, d'autre peigne des tableaux, <a href="#">moi pour m'évader je photographie</a>. Je vous propose ici un carnet de photographie complètement <a href="#">aléatoire</a>, ou pas, selons l'inspiration, les circonstances, les moments de ma vie.  </p>
-            <p><em>Vous pouvez proposer toujours me proposer des chose <a href="<?= Configure::read('host') ?>/Pages/contact">ici</a>. On verra si cela m'inspire </em></p>
+            <p class="profile-description">
+                Il arrive souvent a des photgraphe de voiloir <strong>expérienter des choses</strong> ou d'avoir <strong>des photographies sans "cadre"</strong>, ou série, autour pour les mettre en valeur. <br>Vous allez pouvoir les retrouver <strong>dans ce Carnet</strong>, sans fil conducteur.
+            </p>
 
         </div>
         <!-- End Profile -->
@@ -59,8 +60,7 @@
                 </div>
                 <div class=" book_back" style="background-image:url('/files/project/book.jpg')"></div>
             </div>
-            <p class="profile-description">J'ai regroupé depuis début 2018 un petit groupe de photographes amateurs autour d'<a href="#">un projet</a>. Le bute de ce projet est de <a href="#">ce challenger autour de contraintes</a> diverses, selectionner en debut de mois, afint de produitre autour de celle ci, <a href="#">1 series de photos</a>.</p>
-
+            <p class="profile-description">Depuis début 2018 <strong>un petit groupe de photographes</strong> amateurs ce sont regroupé autour d'un projet.<br> Le bute de ce projet est de <strong>ce challenger tout les mois autour de contraintes</strong>, afint de produitre <strong>1 series de photos</strong>.</p>
         </div>
         <!-- End Profile -->
         

@@ -23,7 +23,7 @@
 
 	            </div>
 	        </div>
-        <?php else: ?>
+        <?php elseif(!empty($categorie['slug'])): ?>
             <div class="row">
                 <div class="span12">
                     <div class="title-page title_new_events">
@@ -37,7 +37,7 @@
             <div class="row">
                 <div class="span12">
                     <div class="title-page title_new_events">
-                        <p class="title ">C'est en cours !</p>
+                        <p class="title ">Ca arrive bientôt <br><br><i class="fas fa-cogs"></i></p>
                     </div>
                 </div>
             </div>

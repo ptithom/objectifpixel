@@ -11,7 +11,7 @@
                 </div>
             </div>
 
-			<p class="title-description-news span8">Depuis longtemps passionné de <a href="#">concerts et autres évenements</a> de tout type, je me suis donné l'objectif d'<a href="#">arriver à transmettre l'intensité</a>, la chaleur, la beauté, par la captation cette ce moment.</p>
+			<p class="title-description-news span8">Depuis longtemps passionné de <strong>phographie prise sur le vif</strong>, j'ai vite compris que l'evenementiel est un tres bon vivier pour ce type de cliché. Ce qui m'annime, c'est d'<strong>arriver à transmettre l'intensité</strong>, la chaleur, la beauté, d'un moment, a traver une image figé dans le temps.</p>
 
 
 		</div>
@@ -22,7 +22,9 @@
 			<?php foreach ($new_events as $key => $event): ?>
 				<div class="new_event">
 					<a href="<?= Configure::read('host') ?>/archives/galerie/<?= $event['CategoriesPhoto']['slug'] ?>">
-						<div class="pict_event" style="background-image:url('<?= $this->Image->resizedUrl('..'.$event['CategoriesInformation']['img_cat'],"367", "250") ?>')"></div>
+						<div class="wrapper_img">
+                            <div class="pict_event" style="background-image:url('<?= $this->Image->resizedUrl('..'.$event['CategoriesInformation']['img_cat'],"367", "250") ?>')"></div>
+                        </div>
 					</a>
 					<div class="info_event" >
 						<p>

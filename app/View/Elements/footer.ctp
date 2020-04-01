@@ -20,6 +20,7 @@ if (file_get_contents('https://graph.facebook.com/objectifpixel/feed?access_toke
         <div class="container">
             <div class="row">
                 <div class="span6">
+                    <div style="margin-bottom: 18px;text-align: left;padding-left: 18px;">Informations</div>
                     <section class="wrappe_actu_site">
                         <div class="picto_actu_site">
                             <?= $this->Html->image('info2.png', array('alt' => 'info')); ?>
@@ -65,27 +66,28 @@ if (file_get_contents('https://graph.facebook.com/objectifpixel/feed?access_toke
 
                         </section>
                     <?php endif; ?>
-                    <section>
-                        <!--<div class="follow">
-                            <a href="https://twitter.com/Bluxart" title="Follow Me on Twitter" target="_blank"><i class="font-icon-social-twitter"></i></a>-->
-
-
-                    </section>
+                    <div class="list_rs">
+                        <a href="https://www.facebook.com/objectifpixel" title="Lien Facebook" >
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/objectifpixel/" title="Lien Instagram" >
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="span3">
-                    <div style="margin-bottom: 18px;font-size: 20px;font-style:italic">#Tags</div>
+                    <div style="margin-bottom: 18px;">&nbsp;</div>
                     <ul class="tags-list">
-                        <li><a href="#">Objectif pixel</a></li>
-                        <li><a href="#">Photographie</a></li>
-                        <li><a href="#">Evenement</a></li>
-                        <li><a href="#">Book</a></li>
-                        <li><a href="#">OnePixOneWeek</a></li>
-                        <li><a href="#">Festival</a></li>
-                        <li><a href="#">Concert</a></li>
-                        <li><a href="#">Pictures Art</a></li>
-                        <li><a href="#">Maine et Loire</a></li>
-                        <li><a href="#">Loir et cher</a></li>
+                        <li><strong>Objectif pixel</strong></li>
+                        <li><strong>Photographie</strong></li>
+                        <li><strong>Evenement</strong></li>
+                        <li><strong>Photomaniax</strong></li>
+                        <li><strong>Argentique</strong></li>
+                        <li><strong>Prise sur le vif</strong></li>
+                        <li><strong>Concert</strong></li>
+                        <li><strong>Abstrait</strong></li>
+                        <li><strong>Maine et Loire</strong></li>
                     </ul>
                 </div>
                 <div class="span3">
@@ -108,7 +110,7 @@ if (file_get_contents('https://graph.facebook.com/objectifpixel/feed?access_toke
         </div>
     </div>
 
-    <p class="credits">&copy;2014 OBJECTIFPIXEL. Developpé par <a href="http://www.thomassire.com/"
-                                                                  title="Thomas Sire | Web Developpeur" target="_blank"><strong>THOMAS
+    <p class="credits">&copy;2014 OBJECTIFPIXEL - Developpé par <a href="http://www.thomassire.com/"
+                                                                  title="Thomas Sire | Web Developpeur" target="_blank"><strong> THOMAS
                 SIRE</strong></a></p>
 </footer>

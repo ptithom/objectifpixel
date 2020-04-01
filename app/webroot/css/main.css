@@ -60,11 +60,17 @@ Version: 1.0
 
     width: 20%;
     height: 40px;
-    margin: auto;
     line-height: 40px;
     vertical-align: middle;
     background-color: #DE5E60;
     color: #26292e;
+    border: 1px solid #DE5E60;
+    margin: 50px auto;
+}
+
+strong {
+    font-size: inherit;
+    color: #DE5E60;
 }
 
 .btn-more:hover {
@@ -127,30 +133,21 @@ footer ul li {
     display: inline-block;
     margin-bottom: 10px;
     margin-right: 6px;
+    margin-left: 6px;
     float: right;
-}
-
-footer ul li a {
-    display: inline-block;
-    text-decoration: none;
+    border: 1px solid #2f3238;
+    padding: 7px 7px;
     transition: all 0.17s ease-in-out;
     -moz-transition: all 0.17s ease-in-out;
     -webkit-transition: all 0.17s ease-in-out;
     -o-transition: all 0.17s ease-in-out;
-    color: #ffffff;
-    font-size: 14px;
-    font-family: 'Roboto Slab', serif;
-    font-weight: 300;
-    padding: 8px 16px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -o-border-radius: 2px;
-    border-radius: 2px;
-    background: rgba(47, 50, 56, 1);
 }
 
-footer ul li a:hover {
+footer ul li:hover {
     background-color: #DE5E60;
+}
+
+footer ul li:hover strong {
     color: white;
 }
 
@@ -163,7 +160,7 @@ footer ul li a:hover {
 .categories .image-wrap:hover .hover-wrap,
 .categories .image-wrap.active .hover-wrap,
 .block_project .image-wrap:hover .hover-wrap,
-.block_project .image-wrap.active .hover-wrap{
+.block_project .image-wrap.active .hover-wrap {
     position: absolute;
     display: block;
     width: 100%;
@@ -186,7 +183,7 @@ footer ul li a:hover {
 
 .onepixoneweek .item-thumbs .hover-wrap,
 .categories .image-wrap .hover-wrap,
-.block_project .image-wrap .hover-wrap{
+.block_project .image-wrap .hover-wrap {
     opacity: 1;
     filter: alpha(opacity=100);
 
@@ -254,10 +251,10 @@ img.img_blocs_new_footer:hover {
     margin-bottom: 2%;
 }
 
-.title-description-news{
-    margin: auto!important;
-    float: none!important;
-    margin-bottom: 50px!important;
+.title-description-news {
+    margin: auto !important;
+    float: none !important;
+    margin-bottom: 100px !important;
     line-height: 20px;
 }
 
@@ -270,6 +267,16 @@ img.img_blocs_new_footer:hover {
     background-position: center center;
     background-color: white;
     border-bottom: 1px solid;
+    transition: all .5s;
+}
+
+.new_event .wrapper_img {
+    overflow: hidden;
+    position: relative;
+}
+
+.new_event .wrapper_img:hover .pict_event {
+    transform: scale(1.2);
 }
 
 .new_event .info_event {
@@ -299,6 +306,7 @@ img.img_blocs_new_footer:hover {
 }
 
 .title-page.title_new_events {
+    margin-top: 40px;
     margin-bottom: 0px;
 }
 
@@ -330,7 +338,9 @@ img.img_blocs_new_footer:hover {
     vertical-align: top;
     margin: 0;
     overflow: auto;
+
 }
+
 
 .wrappe_pres_cat .info_event p:nth-child(1) span:nth-child(1) {
     display: inline-block;
@@ -383,7 +393,7 @@ img.img_blocs_new_footer:hover {
 
 #thumbs.galerie .item-thumbs a + img {
     width: 100%;
-   // visibility: hidden;
+/ / visibility: hidden;
 }
 
 .book_back {
@@ -1025,10 +1035,10 @@ header #logo {
 }
 
 header #logo a {
-/ / background : url(../img/logo-long-blanc_small.png) no-repeat;
+/ / background: url(../img/logo-long-blanc_small.png) no-repeat;
     font-size: 27px;
     color: white;
-/ / text-indent : - 9999 px;
+/ / text-indent: - 9999 px;
     display: block;
     opacity: 1;
     filter: alpha(opacity=100);
@@ -1953,4 +1963,29 @@ footer .credits {
     transition: none;
 }
 
+#page_home #contact, #page_home #archive, #page_home #projet {
+    padding: 50px 0px
+}
 
+#page_home #work {
+    padding-top: 160px;
+}
+
+nav#menu #menu-nav .list_rs_nav a {
+    padding: 0 7px;
+    display: inline-block;
+    color: #DE5E60;
+    font-size: 19px;
+}
+
+footer .list_rs {
+    margin-top: 30px;
+    margin-bottom: 18px;
+    text-align: left;
+    padding-left: 18px;
+    font-size: 25px;
+
+}
+footer .list_rs a {
+    margin-right: 15px;
+}

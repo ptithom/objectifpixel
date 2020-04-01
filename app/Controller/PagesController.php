@@ -16,7 +16,10 @@ class PagesController extends AppController {
 
 	public function home() {
 
-		$this->get_new_event();
+        $this->loadModel('Photographe');
+        $data['photographe'] = $this->Photographe->find('first');
+        $this->set($data);
+        $this->get_new_event();
 
 	}
 

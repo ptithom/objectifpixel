@@ -6,7 +6,7 @@
         <div class="span12">
             <div class="title-page">
                 <h2 class="title">Contact</h2>
-                <h3 class="title-description">Vous aimeriez bien vous faire <a href="#">un shooting</a> avec moi?<br/> Vous avez <a href="#">un theme / une idée</a> a me soumettre ? Ou tout autre requette?<br/s><br/> N'hésitez pas, je vous répondrai !! </h3>
+                <h3 class="title-description">Vous aimeriez bien vous faire <strong>un shooting</strong> avec moi?<br/> Vous avez <strong>un theme / une idée</strong> a me soumettre ? Ou tout autre requette?<br/s><br/> N'hésitez pas, je vous répondrai !! </h3>
             </div>
         </div>
     </div>
@@ -42,7 +42,7 @@
         	<div class="contact-details">
         		<h3>Details</h3>
                 <ul>
-                    <li><a href="#">t.sire41+objectifpixel(at)gmail.com</a></li>
+                    <li><strong>t.sire41+objectifpixel(at)gmail.com</strong</li>
                     <li>
                         Thomas sire
                         <br>

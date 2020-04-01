@@ -77,11 +77,11 @@ BRUSHED.slider = function(){
 		thumb_links				:	0,			// Individual thumb links for each slide
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
-											{image : '/img/slider-images/concert.jpg', title : '<div class="slide-content"><img style="width:400px" src="/img/slider-images/logo_blanc.png" alt="logo" /></div>', thumb : '', url : ''},
-											{image : '/img/slider-images/crea.jpg', title : '<div class="slide-content"><img style="width:400px" src="/img/slider-images/logo_blanc.png" alt="logo" /></div>', thumb : '', url : ''},
-											{image : '/img/slider-images/paysage.jpg', title : '<div class="slide-content"><img style="width:400px" src="/img/slider-images/logo_blanc.png" alt="logo" /></div>', thumb : '', url : ''},
-											{image : '/img/slider-images/portrait.jpg', title : '<div class="slide-content"><img style="width:400px" src="/img/slider-images/logo_blanc.png" alt="logo" /></div>', thumb : '', url : ''},
-											{image : '/img/slider-images/concert2.jpg', title : '<div class="slide-content"><img style="width:400px" src="/img/slider-images/logo_blanc.png" alt="logo" /></div>', thumb : '', url : ''}
+											{image : '/img/slider-images/concert.jpg', title : '<div class="slide-content"><img style="width:400px" src="/img/slider-images/logo_blanc.png" alt="logo" /><a class="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a></div>', thumb : '', url : ''},
+											{image : '/img/slider-images/crea.jpg', title : '<div class="slide-content"><img style="width:400px" src="/img/slider-images/logo_blanc.png" alt="logo" /><a class="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a></div>', thumb : '', url : ''},
+											{image : '/img/slider-images/paysage.jpg', title : '<div class="slide-content"><img style="width:400px" src="/img/slider-images/logo_blanc.png" alt="logo" /><a class="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a></div>', thumb : '', url : ''},
+											{image : '/img/slider-images/portrait.jpg', title : '<div class="slide-content"><img style="width:400px" src="/img/slider-images/logo_blanc.png" alt="logo" /><a class="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a></div>', thumb : '', url : ''},
+											{image : '/img/slider-images/concert2.jpg', title : '<div class="slide-content"><img style="width:400px" src="/img/slider-images/logo_blanc.png" alt="logo" /><a class="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a></div>', thumb : '', url : ''}
 									],
 									
 		// Theme Options			   

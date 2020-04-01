@@ -5,7 +5,7 @@
             <div class="span12">
                 <div class="title-page">
                     <h2 class="title">Les nouveautées</h2>
-                    <div class="title-description">Regarder les derniers <a href="#">Shoot</a> publier.</div>
+                    <div class="title-description">Regarder les derniers <strong>Shooting</strong> publier.</div>
                 </div>
             </div>
         </div>

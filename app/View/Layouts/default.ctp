@@ -55,6 +55,7 @@ $cakeDescription = __d('Objectifpixel', "Objectifpixel: Site web spécialisé da
 
     <!-- Css -->
     <?php echo $this->Html->css('bootstrap.min'); ?>
+    <?php echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'); ?>
     <?php echo $this->Html->css('main'); ?>
     <?php echo $this->Html->css('supersized'); ?>
     <?php echo $this->Html->css('supersized.shutter'); ?>
@@ -85,7 +86,7 @@ $cakeDescription = __d('Objectifpixel', "Objectifpixel: Site web spécialisé da
 
 </head>
 
-<body>
+<body id="page_<?= $this->request->params['action']; ?>">
 <div id="fb-root"></div>
 <div id="fb-root"></div>
 <script>
