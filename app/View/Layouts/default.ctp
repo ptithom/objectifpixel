@@ -1,5 +1,5 @@
 <?php
-$cakeDescription = __d('Objectifpixel', "Objectifpixel: Site web spécialisé dans la photo événementielle. Par Thomas sire amateur d'instant volé et photographe du Loir et Cher et Pays de la Loire.");
+$cakeDescription = __d('Objectifpixel', "Objectifpixel: Photographe événementielle. Par Thomas sire");
 
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>
@@ -17,7 +17,7 @@ $cakeDescription = __d('Objectifpixel', "Objectifpixel: Site web spécialisé da
     <?php echo $this->Html->charset(); ?>
 
     <title>
-        Objectif-Pixel<?= ($this->request->here != '/')?" : ".$this->params['controller']:""; ?>
+        Objectif-Pixel<?= ($this->request->here != '/') ? " : " . $this->params['controller'] : ""; ?>
     </title>
 
     <link href="/img/icon.ico" type="image/x-icon" rel="icon">
@@ -31,7 +31,7 @@ $cakeDescription = __d('Objectifpixel', "Objectifpixel: Site web spécialisé da
     <link rel="apple-touch-icon" sizes="144x144" href="/img/fav/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/img/fav/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/fav/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/img/fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/fav/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/img/fav/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/fav/favicon-16x16.png">
@@ -40,18 +40,39 @@ $cakeDescription = __d('Objectifpixel', "Objectifpixel: Site web spécialisé da
     <meta name="msapplication-TileImage" content="/img/fav/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <?php  echo $this->fetch('meta'); ?>
+    <?php echo $this->fetch('meta'); ?>
 
     <meta name="description" content="<?php echo $cakeDescription ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="HandheldFriendly" content="true"/>
     <meta name="MobileOptimized" content="320"/>
 
-    <meta property="og:title" content="Objectif Pixel" />
-    <meta property="og:description" content="<?php echo str_replace('du Loir et Cher et Pays de la Loire',"",$cakeDescription) ?>" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://objectifpixel.com/" />
-    <meta property="og:image" content="http://objectifpixel.com/img/logo3.png" />
+    <?php if ($this->request->params['action'] == "galerie" && !empty($categorie)): ?>
+
+        <?php
+        $img_src = WWW_ROOT . $categorie['CategoriesInformation']['img_cat'];
+        $size_media = getimagesize($img_src);
+        ?>
+
+        <meta property="og:title"
+              content="Objectifpixel - <?php echo $categorie['CategoriesInformation']['sub_name'] ?>"/>
+        <meta property="og:description" content="<?php echo $categorie['desc_cat']; ?>"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:url"
+              content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>"/>
+        <meta property="og:site_name" content="Objectifpixel"/>
+        <meta property="og:image" content="<?= "/app/webroot" . $categorie['CategoriesInformation']['img_cat'] ?>"/>
+        <meta property="og:image:width" content="<?php echo $size_media[0]; ?>"/>
+        <meta property="og:image:height" content="<?php echo $size_media[1]; ?>"/>
+        <link rel="image_src" href="<?php echo "/app/webroot" . $categorie['CategoriesInformation']['img_cat']; ?>"/>
+
+    <?php else: ?>
+        <meta property="og:title" content="Objectif Pixel"/>
+        <meta property="og:description" content="<?php echo $cakeDescription ?>"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="http://objectifpixel.com/"/>
+        <meta property="og:image" content="http://objectifpixel.com/img/logo3.png"/>
+    <?php endif; ?>
 
     <!-- Css -->
     <?php echo $this->Html->css('bootstrap.min'); ?>
@@ -69,16 +90,10 @@ $cakeDescription = __d('Objectifpixel', "Objectifpixel: Site web spécialisé da
     <?php echo $this->Html->css('supersized.shutter'); ?>
 
 
-
     <!-- Google Font -->
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900'
+          rel='stylesheet' type='text/css'>
 
-    <!-- Fav Icon -->
-    <link rel="shortcut icon" href="#">
-    <link rel="apple-touch-icon" href="#">
-    <link rel="apple-touch-icon" sizes="114x114" href="#">
-    <link rel="apple-touch-icon" sizes="72x72" href="#">
-    <link rel="apple-touch-icon" sizes="144x144" href="#">
 
     <!-- Js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -130,10 +145,17 @@ $cakeDescription = __d('Objectifpixel', "Objectifpixel: Site web spécialisé da
 <!-- End Js -->
 
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-38625631-1', 'auto');
     ga('send', 'pageview');
